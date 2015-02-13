@@ -25,7 +25,7 @@ Dir.chdir APP_ROOT do
 
   puts "\n== Copy the sample.env to .env =="
   unless File.exist?(File.join(APP_ROOT, ".env"))
-    system "cp sample.env .env"
+    system "cp .sample.env .env"
   end
 
   puts "\n== Restarting application server =="

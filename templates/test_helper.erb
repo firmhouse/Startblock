@@ -11,7 +11,7 @@ require "minitest/rails/capybara"
 require "minitest/reporters"
 
 Sidekiq::Testing.fake!
-Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
+Minitest::Reporters.use! Minitest::Reporters::ProgressReporter.new
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.

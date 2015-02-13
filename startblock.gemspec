@@ -5,7 +5,7 @@ require 'date'
 
 Gem::Specification.new do |s|
   s.required_ruby_version = ">= #{Startblock::RUBY_VERSION}"
-  s.authors = ['Firmhouse']
+  s.authors = ['Jeroen van Baarsen', 'Firmhouse']
   s.date = Date.today.strftime('%Y-%m-%d')
 
   s.description = <<-HERE
@@ -26,7 +26,8 @@ start on a working app.
   s.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.version = Startblock::VERSION
 
-  s.add_dependency 'bitters', '~> 0.10.0'
+  s.add_dependency 'bitters', '~> 0.10'
   s.add_dependency 'bundler', '~> 1.3'
   s.add_dependency 'rails', Startblock::RAILS_VERSION
+  s.add_dependency 'thor', '~> 0.19'
 end

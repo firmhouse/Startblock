@@ -6,13 +6,19 @@ module Startblock
     class_option :database, type: :string, aliases: "-d", default: "postgresql",
       desc: "Configure for selected database (options: #{DATABASES.join("/")})"
 
+    class_option :skip_test_unit, type: :boolean, aliases: "-T", default: false,
+      desc: "Skip Test::Unit files"
+
+    class_option :skip_turbolinks, type: :boolean, default: false,
+      desc: "Skip turbolinks gem"
+
     def finish_template
       invoke :startblock_customization
       super
     end
 
     def startblock_customization
-      invoke :cutomize_gemfile
+      invoke :customize_gemfile
       invoke :setup_development_environment
       invoke :setup_testing_environment
       invoke :setup_staging_environment
@@ -44,7 +50,7 @@ module Startblock
       build :configure_i18n_for_missing_translations
     end
 
-    def setup_testing_enviornment
+    def setup_testing_environment
       say "Setting up the testing environment"
       build :configuring_test_helper
     end
@@ -116,4 +122,15 @@ module Startblock
     def outro
       say 'Congratulations! You just entered our startblock.'
     end
+
+    def run_bundle
+      # Let's not: We'll bundle manually at the right spot
+    end
+
+    protected
+
+    def get_builder_class
+      Startblock::AppBuilder
+    end
+  end
 end

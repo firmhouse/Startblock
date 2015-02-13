@@ -2,6 +2,10 @@ module Startblock
   class AppBuilder < Rails::AppBuilder
     include Startblock::Actions
 
+    def readme
+      template 'README.md.erb', 'README.md'
+    end
+
     def replace_gemfile
       remove_file 'Gemfile'
       template 'Gemfile.erb', 'Gemfile'
@@ -120,6 +124,10 @@ end
       copy_file 'startblock_gitignore', '.gitignore'
     end
 
+    def init_git
+      run 'git init'
+    end
+
     def setup_mixpanel
       copy_file '_mixpanel.html.erb',
         'app/views/application/_mixpanel.html.erb'
@@ -132,4 +140,5 @@ end
 
       uncomment_lines("config/environments/#{environment}.rb", config)
     end
+  end
 end

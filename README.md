@@ -54,7 +54,7 @@ This gem is cloned from the [Suspenders][suspenders] project and formatted to
 the wishes we have at Firmhouse. The main idea of this gem goes out to the amazing people at
 [Thoughtbot][thoughtbot].
 
-[thoughbot]: http://thoughtbot.com
+[thoughtbot]: http://thoughtbot.com
 [suspenders]: http://github.com/thoughtbot/suspenders
 
 
