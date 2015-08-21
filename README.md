@@ -1,5 +1,7 @@
 # Startblock
 
+[![Build Status](https://travis-ci.org/firmhouse/Startblock.svg)](https://travis-ci.org/firmhouse/Startblock)
+
 Startblock is the base Rails application used at
 [Firmhouse](http://firmhouse.com).
 
