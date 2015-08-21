@@ -22,5 +22,11 @@ class NewProjectTest < Minitest::Test
       end
     end
   end
+
+  def test_gemfile_should_contain_certain_gems
+    gemfile = IO.read("#{project_path}/Gemfile")
+
+    assert gemfile.match(/quiet_assets/), "Gemfile should contain quiet assets gem"
+  end
 end
 
