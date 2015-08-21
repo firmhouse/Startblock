@@ -13,6 +13,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Removed
 - Bourbon, Bitters and Neat has been removed
+- Rollbar
+- Normalize-rails
 
 ### Fixed
 - Nothing
