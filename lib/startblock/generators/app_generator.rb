@@ -26,6 +26,7 @@ module Startblock
       invoke :create_startblock_views
       invoke :configure_app
       invoke :setup_stylesheets
+      invoke :setup_javascripts
       invoke :remove_routes_comment_lines
       invoke :setup_git
       invoke :setup_database
@@ -81,6 +82,11 @@ module Startblock
     def setup_stylesheets
       say 'Set up stylesheets'
       build :setup_stylesheets
+    end
+
+    def setup_javascripts
+      say "Set up javascripts"
+      build :setup_javascripts
     end
 
     def remove_routes_comment_lines

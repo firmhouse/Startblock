@@ -105,6 +105,11 @@ end
         'app/assets/stylesheets/application.css.scss'
     end
 
+    def setup_javascripts
+      remove_file "app/assets/javascript/application.js"
+      copy_file "application.js", "app/assets/javascript/application.js"
+    end
+
     def remove_routes_comment_lines
       replace_in_file 'config/routes.rb',
         /Rails\.application\.routes\.draw do.*end/m,
