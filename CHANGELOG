@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## Master - Unstable
 
 ### Added
-- Nothing
+- Rubocop was added with a default config
 
 ### Changed
 - Updated the ruby version to 2.2.3

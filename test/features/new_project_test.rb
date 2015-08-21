@@ -14,5 +14,13 @@ class NewProjectTest < Minitest::Test
     ruby_version_file = IO.read("#{project_path}/.ruby-version")
     assert_equal ruby_version_file, "#{RUBY_VERSION}\n"
   end
+
+  def test_rubocop_should_pass
+    Dir.chdir(project_path) do
+      Bundler.with_clean_env do
+        assert `rubocop`.match(/no offenses detected/), "Rubocop should not be offended"
+      end
+    end
+  end
 end
 

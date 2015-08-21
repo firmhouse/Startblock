@@ -30,6 +30,7 @@ module Startblock
       invoke :setup_git
       invoke :setup_database
       invoke :setup_mixpanel
+      invoke :setup_rubocop
       invoke :outro
     end
 
@@ -105,6 +106,11 @@ module Startblock
     def setup_mixpanel
       say 'Setting up Mixpanel'
       build :setup_mixpanel
+    end
+
+    def setup_rubocop
+      say "Setting up Rubocop"
+      build :setup_rubocop
     end
 
     def outro
