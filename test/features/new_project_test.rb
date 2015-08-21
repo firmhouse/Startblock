@@ -28,5 +28,12 @@ class NewProjectTest < Minitest::Test
 
     assert gemfile.match(/quiet_assets/), "Gemfile should contain quiet assets gem"
   end
+
+  def test_application_js_should_be_created
+    app_js_file = IO.read("#{project_path}/app/assets/javascript/application.js")
+
+    assert app_js_file.match(/= require jquery.turbolinks/), "Jquery.turbolinks should be present"
+    assert app_js_file.match(/FastClick.attach/), "Fastclick should be initialized"
+  end
 end
 
