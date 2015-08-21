@@ -125,6 +125,10 @@ end
         'app/views/application/_mixpanel.html.erb'
     end
 
+    def setup_rubocop
+      copy_file "rubocop.yml", ".rubocop.yml"
+    end
+
     private
 
     def raise_on_missing_translations_in(environment)
