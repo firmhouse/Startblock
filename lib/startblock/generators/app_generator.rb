@@ -26,8 +26,6 @@ module Startblock
       invoke :create_startblock_views
       invoke :configure_app
       invoke :setup_stylesheets
-      invoke :install_bitters
-      invoke :install_refills
       invoke :remove_routes_comment_lines
       invoke :setup_git
       invoke :setup_database
@@ -82,16 +80,6 @@ module Startblock
     def setup_stylesheets
       say 'Set up stylesheets'
       build :setup_stylesheets
-    end
-
-    def install_bitters
-      say 'Install Bitters'
-      build :install_bitters
-    end
-
-    def install_refills
-      say "Install Refills"
-      build :install_refills
     end
 
     def remove_routes_comment_lines
