@@ -26,6 +26,7 @@ class NewProjectTest < Minitest::Test
   def test_gemfile_should_contain_certain_gems
     gemfile = IO.read("#{project_path}/Gemfile")
 
+    assert gemfile.match(/bootstrap-sass/), "Gemfile should contain bootstrap-sass gem"
     assert gemfile.match(/quiet_assets/), "Gemfile should contain quiet assets gem"
   end
 
@@ -33,6 +34,7 @@ class NewProjectTest < Minitest::Test
     app_js_file = IO.read("#{project_path}/app/assets/javascript/application.js")
 
     assert app_js_file.match(/= require jquery.turbolinks/), "Jquery.turbolinks should be present"
+    assert app_js_file.match(/= require bootstrap-sprockets/), "Bootstrap should be present"
     assert app_js_file.match(/FastClick.attach/), "Fastclick should be initialized"
   end
 end
