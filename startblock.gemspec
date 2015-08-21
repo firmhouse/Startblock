@@ -26,7 +26,8 @@ start on a working app.
   s.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.version = Startblock::VERSION
 
-  s.add_dependency 'bundler', '~> 1.3'
-  s.add_dependency 'rails', Startblock::RAILS_VERSION
-  s.add_dependency 'thor', '~> 0.19'
+  s.add_development_dependency "minitest", "~> 5.8"
+  s.add_runtime_dependency 'bundler', '~> 1.3'
+  s.add_runtime_dependency 'rails', Startblock::RAILS_VERSION
+  s.add_runtime_dependency 'thor', '~> 0.19'
 end
