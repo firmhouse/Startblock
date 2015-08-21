@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Rubocop was added with a default config
+- Bootstrap is now our default templating 'framework'
 
 ### Changed
 - Updated the ruby version to 2.2.3
