@@ -12,7 +12,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Make rails version follow all patch versions (Added ~> to the version)
 
 ### Removed
-- Nothing
+- Bourbon, Bitters and Neat has been removed
+- Rollbar
+- Normalize-rails
 
 ### Fixed
 - Nothing

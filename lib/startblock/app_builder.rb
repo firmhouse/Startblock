@@ -105,14 +105,6 @@ end
         'app/assets/stylesheets/application.css.scss'
     end
 
-    def install_bitters
-      run "bitters install --path app/assets/stylesheets"
-    end
-
-    def install_refills
-      run "rails generate refills:import flashes"
-    end
-
     def remove_routes_comment_lines
       replace_in_file 'config/routes.rb',
         /Rails\.application\.routes\.draw do.*end/m,
