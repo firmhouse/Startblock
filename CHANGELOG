@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Updated the ruby version to 2.2.3
+- Make rails version follow all patch versions (Added ~> to the version)
 
 ### Removed
 - Nothing
