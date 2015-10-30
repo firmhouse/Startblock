@@ -32,7 +32,7 @@ class NewProjectTest < Minitest::Test
   end
 
   def test_application_js_should_b_created
-    app_js_file = IO.read("#{project_path}/app/assets/javascript/application.js")
+    app_js_file = IO.read("#{project_path}/app/assets/javascripts/application.js")
 
     assert app_js_file.match(/= require jquery.turbolinks/), "Jquery.turbolinks should be present"
     assert app_js_file.match(/= require bootstrap-sprockets/), "Bootstrap should be present"
