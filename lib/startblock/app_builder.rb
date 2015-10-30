@@ -106,8 +106,8 @@ end
     end
 
     def setup_javascripts
-      remove_file "app/assets/javascript/application.js"
-      copy_file "application.js", "app/assets/javascript/application.js"
+      remove_file "app/assets/javascripts/application.js"
+      copy_file "application.js", "app/assets/javascripts/application.js"
     end
 
     def remove_routes_comment_lines
