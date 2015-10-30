@@ -37,5 +37,12 @@ class NewProjectTest < Minitest::Test
     assert app_js_file.match(/= require bootstrap-sprockets/), "Bootstrap should be present"
     assert app_js_file.match(/FastClick.attach/), "Fastclick should be initialized"
   end
+
+  def test_gitignore_should_be_created
+    app_ignore_file = IO.read("#{project_path}/.gitignore")
+
+    assert app_ignore_file.match(/passenger/), "Passenger ignore should be present"
+    assert app_ignore_file.match(/env/), ".env ignore should be present"
+  end
 end
 

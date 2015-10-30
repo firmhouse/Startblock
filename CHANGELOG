@@ -2,20 +2,16 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## V1.1 - Navy Silver (Released on 2015-08-21)
+## V1.2 - Not yet released
 
 ### Added
-- Rubocop was added with a default config
-- Bootstrap is now our default templating 'framework'
+- Nothing
 
 ### Changed
-- Updated the ruby version to 2.2.3
-- Make rails version follow all patch versions (Added ~> to the version)
+- Passenger files are now added to .gitignore
 
 ### Removed
-- Bourbon, Bitters and Neat has been removed
-- Rollbar
-- Normalize-rails
+- Nothing
 
 ### Fixed
 - Nothing
