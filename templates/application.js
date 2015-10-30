@@ -3,6 +3,8 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require fastclick
+//= require nprogress
+//= require nprogress-turbolinks
 //= require turbolinks
 
 $(function() {

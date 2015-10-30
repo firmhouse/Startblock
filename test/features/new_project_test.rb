@@ -28,6 +28,7 @@ class NewProjectTest < Minitest::Test
 
     assert gemfile.match(/bootstrap-sass/), "Gemfile should contain bootstrap-sass gem"
     assert gemfile.match(/quiet_assets/), "Gemfile should contain quiet assets gem"
+    assert gemfile.match(/nprogress-rails/), "Gemfile should contain NProgress-rails"
   end
 
   def test_application_js_should_be_created
@@ -35,6 +36,7 @@ class NewProjectTest < Minitest::Test
 
     assert app_js_file.match(/= require jquery.turbolinks/), "Jquery.turbolinks should be present"
     assert app_js_file.match(/= require bootstrap-sprockets/), "Bootstrap should be present"
+    assert app_js_file.match(/= require nprogress/), "Nprogress should be present"
     assert app_js_file.match(/FastClick.attach/), "Fastclick should be initialized"
   end
 
@@ -43,6 +45,14 @@ class NewProjectTest < Minitest::Test
 
     assert app_ignore_file.match(/passenger/), "Passenger ignore should be present"
     assert app_ignore_file.match(/env/), ".env ignore should be present"
+  end
+
+  def test_application_css_should_be_created
+    app_css_file = IO.read("#{project_path}/app/assets/stylesheets/application.css.scss")
+
+    assert app_css_file.match(/bootstrap/), "Bootstrap should be present"
+    assert app_css_file.match(/nprogress/), "Nprogress should be present"
+
   end
 end
 
