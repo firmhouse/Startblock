@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Passenger files are now added to .gitignore
+- We now generate an application.scss instead of application.css.scss file
 
 ### Removed
 - Nothing
