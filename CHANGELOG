@@ -6,13 +6,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Added NProgress-rails gem
+- Added letter_opener in development
 
 ### Changed
 - Passenger files are now added to .gitignore
 - We now generate an application.scss instead of application.css.scss file
 
 ### Removed
-- Nothing
+- We no longer send mails to mailcatcher in dev
 
 ### Fixed
 - Place the JS file in the correct folder
