@@ -31,7 +31,7 @@ class NewProjectTest < Minitest::Test
     assert gemfile.match(/nprogress-rails/), "Gemfile should contain NProgress-rails"
   end
 
-  def test_application_js_should_be_created
+  def test_application_js_should_b_created
     app_js_file = IO.read("#{project_path}/app/assets/javascript/application.js")
 
     assert app_js_file.match(/= require jquery.turbolinks/), "Jquery.turbolinks should be present"
@@ -48,7 +48,7 @@ class NewProjectTest < Minitest::Test
   end
 
   def test_application_css_should_be_created
-    app_css_file = IO.read("#{project_path}/app/assets/stylesheets/application.css.scss")
+    app_css_file = IO.read("#{project_path}/app/assets/stylesheets/application.scss")
 
     assert app_css_file.match(/bootstrap/), "Bootstrap should be present"
     assert app_css_file.match(/nprogress/), "Nprogress should be present"
