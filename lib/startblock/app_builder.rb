@@ -90,7 +90,8 @@ end
     end
 
     def configure_action_mailer
-      action_mailer_host "development", %{"localhost:1205"}
+      config = "config.action_mailer.delivery_method = :letter_opener"
+      configure_environment("development", config)
       action_mailer_host "test", %{"www.example.com"}
     end
 

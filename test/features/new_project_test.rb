@@ -52,7 +52,12 @@ class NewProjectTest < Minitest::Test
 
     assert app_css_file.match(/bootstrap/), "Bootstrap should be present"
     assert app_css_file.match(/nprogress/), "Nprogress should be present"
+  end
 
+  def test_develoment_rb_content
+    development_rb_file = IO.read("#{project_path}/config/environments/development.rb")
+
+    assert development_rb_file.match(/letter_opener/), "Should have the letter opener"
   end
 end
 
