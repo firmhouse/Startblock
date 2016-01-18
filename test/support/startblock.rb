@@ -12,7 +12,7 @@ module StartblockTestHelpers
   def run_startblock(arguments = nil)
     Dir.chdir(tmp_path) do
       Bundler.with_clean_env do
-        %x(#{startblock_bin} #{APP_NAME} #{arguments})
+        %x(bundle exec #{startblock_bin} #{APP_NAME} #{arguments})
       end
     end
   end

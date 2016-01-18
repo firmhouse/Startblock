@@ -31,6 +31,11 @@ class NewProjectTest < Minitest::Test
     assert gemfile.match(/nprogress-rails/), "Gemfile should contain NProgress-rails"
   end
 
+  def test_gemfile_should_contain_ruby_version
+    gemfile = IO.read("#{project_path}/Gemfile")
+    assert gemfile.match(/^ruby \".+\"$/), "Gemfile should contain a Ruby version"
+  end
+
   def test_application_js_should_b_created
     app_js_file = IO.read("#{project_path}/app/assets/javascripts/application.js")
 
@@ -60,4 +65,3 @@ class NewProjectTest < Minitest::Test
     assert development_rb_file.match(/letter_opener/), "Should have the letter opener"
   end
 end
-
