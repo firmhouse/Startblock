@@ -10,9 +10,10 @@ AllCops:
     - "bin/**/*"
     - "**/Rakefile"
     - "**/config.ru"
-  RunRailsCops: true
   DisplayCopNames: true
   StyleGuideCopsOnly: false
+Rails:
+  Enabled: true
 Style/AndOr:
   EnforcedStyle: always
   Enabled: true
