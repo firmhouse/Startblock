@@ -58,6 +58,7 @@ class NewProjectTest < Minitest::Test
 
     assert app_css_file.match(/bootstrap/), "Bootstrap should be present"
     assert app_css_file.match(/nprogress/), "Nprogress should be present"
+    assert app_css_file.match(/font-awesome/), "FontAwesome should be present"
   end
 
   def test_develoment_rb_content
