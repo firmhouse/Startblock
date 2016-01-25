@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Added font-awesome-sass gem for including FontAwesome icons
+- Added bootstrap_form gem that includes a bootstrap form builder
 
 ### Changed
 - Add Ruby version to Gemfile
