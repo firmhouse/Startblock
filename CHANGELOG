@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## V1.3 - Unreleased
 
+### Added
+- Added font-awesome-sass gem for including FontAwesome icons
+
 ### Changed
 - Add Ruby version to Gemfile
 
