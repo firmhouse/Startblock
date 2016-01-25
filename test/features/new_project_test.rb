@@ -29,6 +29,7 @@ class NewProjectTest < Minitest::Test
     assert gemfile.match(/bootstrap-sass/), "Gemfile should contain bootstrap-sass gem"
     assert gemfile.match(/quiet_assets/), "Gemfile should contain quiet assets gem"
     assert gemfile.match(/nprogress-rails/), "Gemfile should contain NProgress-rails"
+    assert gemfile.match(/font-awesome-sass/), "Gemfile should contain font-awesome-sass"
   end
 
   def test_gemfile_should_contain_ruby_version
