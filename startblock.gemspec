@@ -27,6 +27,7 @@ start on a working app.
   s.version = Startblock::VERSION
 
   s.add_development_dependency "minitest", "~> 5.8"
+  s.add_development_dependency 'rails', Startblock::RAILS_VERSION
   s.add_runtime_dependency 'bundler', '~> 1.3'
   s.add_runtime_dependency 'rails', Startblock::RAILS_VERSION
   s.add_runtime_dependency 'thor', '~> 0.19'

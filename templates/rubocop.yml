@@ -68,5 +68,7 @@ Style/ClassAndModuleChildren:
   Enabled: false
 Rails/TimeZone:
   Enabled: false
+Rails:
+  Enabled: true
 Style/IfUnlessModifier:
   Enabled: true
