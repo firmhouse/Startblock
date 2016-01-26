@@ -106,7 +106,6 @@ PLATFORMS
 
 DEPENDENCIES
   minitest (~> 5.8)
-  rails (~> 4.2)
   rake
   startblock!
 
