@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Add Ruby version to Gemfile
+- Moved JavaScript partial from inside <body> to inside <head> in application.html.erb
 
 ## V1.2 - Black Copper - 2015-10-31
 

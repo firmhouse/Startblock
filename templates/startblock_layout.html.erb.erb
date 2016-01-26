@@ -6,11 +6,13 @@
   <meta name="viewport" content="initial-scale=1" />
   <title>appname</title>
   <%%= stylesheet_link_tag :application, media: "all" %>
+  <%%= javascript_include_tag :application %>
+
+  <%%= render "javascript" %>
   <%%= csrf_meta_tags %>
 </head>
 <body>
   <%%= render "flashes" -%>
   <%%= yield %>
-  <%%= render "javascript" %>
 </body>
 </html>
