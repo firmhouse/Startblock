@@ -6,6 +6,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 - Updated Ruby to 2.3.0
+- Defaults to Intercity-Next configuration
+
+### Added
+- Puma as app server
+
+### Removed
+- All capistrano related stuff
 
 ## V1.3 - Purple Mercury - 2016-01-26
 

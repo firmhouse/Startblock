@@ -23,6 +23,10 @@ class NewProjectTest < Minitest::Test
     end
   end
 
+  def test_puma_config_should_exist
+    assert File.exists?("#{project_path}/config/puma.rb"), "config/puma.rb should exist"
+  end
+
   def test_gemfile_should_contain_certain_gems
     gemfile = IO.read("#{project_path}/Gemfile")
 
@@ -31,11 +35,19 @@ class NewProjectTest < Minitest::Test
     assert gemfile.match(/nprogress-rails/), "Gemfile should contain NProgress-rails"
     assert gemfile.match(/font-awesome-sass/), "Gemfile should contain font-awesome-sass"
     assert gemfile.match(/bootstrap_form/), "Gemfile should contain bootstrap_form"
+    assert gemfile.match(/puma/), "Gemfile should contain puma"
+    assert gemfile.match(/rails_12factor/), "Gemfile should contain rails_12factor"
   end
 
   def test_gemfile_should_contain_ruby_version
     gemfile = IO.read("#{project_path}/Gemfile")
     assert gemfile.match(/^ruby \".+\"$/), "Gemfile should contain a Ruby version"
+  end
+
+  def test_database_yml_should_containt_staging_and_production
+    database_yml = IO.read("#{project_path}/config/database.yml")
+    assert database_yml.match(/staging/), "Database.yml should contain staging"
+    assert database_yml.match(/production/), "Database.yml should contain production"
   end
 
   def test_application_js_should_b_created

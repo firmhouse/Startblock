@@ -10,3 +10,11 @@ development: &default
 test:
   <<: *default
   database: <%= app_name %>_test
+
+staging:
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
+
+production:
+  <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
