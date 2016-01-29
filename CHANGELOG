@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## V1.4 - Unreleased
+
+### Changed
+- Updated Ruby to 2.3.0
+
 ## V1.3 - Purple Mercury - 2016-01-26
 
 ### Added
