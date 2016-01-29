@@ -16,15 +16,11 @@ gem "redis-namespace", "~> 1.5.1"
 gem "nprogress-rails", "~> 0.1.6"
 gem "font-awesome-sass", "~> 4.5.0"
 gem "bootstrap_form", "~> 2.3.0"
+gem "puma", "~> 2.16"
 
 group :development do
   gem "spring"
   gem "web-console"
-  gem "capistrano"
-  gem "capistrano-rails"
-  gem "capistrano-rails-console"
-  gem "daemon_controller"
-  gem "passenger"
   gem "quiet_assets"
   gem "letter_opener"
 end
@@ -44,6 +40,7 @@ group :test do
 end
 
 group :staging, :production do
+  gem "rails_12factor"
 end
 
 source "https://rails-assets.org" do

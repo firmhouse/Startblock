@@ -28,6 +28,7 @@ module Startblock
       invoke :setup_stylesheets
       invoke :setup_javascripts
       invoke :remove_routes_comment_lines
+      invoke :setup_puma
       invoke :setup_git
       invoke :setup_database
       invoke :setup_mixpanel
@@ -91,6 +92,11 @@ module Startblock
 
     def remove_routes_comment_lines
       build :remove_routes_comment_lines
+    end
+
+    def setup_puma
+      say 'Setting up puma'
+      build :copy_puma_config
     end
 
     def setup_git

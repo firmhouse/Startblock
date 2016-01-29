@@ -122,6 +122,10 @@ end
       copy_file 'startblock_gitignore', '.gitignore'
     end
 
+    def copy_puma_config
+      copy_file 'puma.rb', 'config/puma.rb'
+    end
+
     def init_git
       run 'git init'
     end
