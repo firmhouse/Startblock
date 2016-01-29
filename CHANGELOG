@@ -7,6 +7,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Updated Ruby to 2.3.0
 
+### Fixed
+- Make sure we import the correct bootstrap-sass scss file
+
 ## V1.3 - Purple Mercury - 2016-01-26
 
 ### Added
