@@ -48,7 +48,6 @@ module Startblock
       build :raise_on_delivery_errors
       build :raise_on_unpermitted_parameters
       build :provide_setup_script
-      build :configure_i18n_for_missing_translations
     end
 
     def setup_testing_environment

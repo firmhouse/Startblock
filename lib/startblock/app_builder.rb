@@ -43,11 +43,6 @@ module Startblock
       run "chmod a+x bin/setup"
     end
 
-    def configure_i18n_for_missing_translations
-      raise_on_missing_translations_in("development")
-      raise_on_missing_translations_in("test")
-    end
-
     def configuring_test_helper
       remove_file "test/test_helper.rb"
       template "test_helper.erb", "test/test_helper.rb"
@@ -137,14 +132,6 @@ end
 
     def setup_rubocop
       copy_file "rubocop.yml", ".rubocop.yml"
-    end
-
-    private
-
-    def raise_on_missing_translations_in(environment)
-      config = 'config.action_view.raise_on_missing_translations = true'
-
-      uncomment_lines("config/environments/#{environment}.rb", config)
     end
   end
 end

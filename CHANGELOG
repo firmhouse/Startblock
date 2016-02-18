@@ -7,6 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 ### Added
 ### Removed
+- Raise on missing I18n
+
 ### Fixed
 
 ## V1.4 - Maroon Lead - 2016-01-29
