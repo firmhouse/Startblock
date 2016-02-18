@@ -28,7 +28,7 @@ end
 group :development, :test do
   gem "awesome_print"
   gem "dotenv-rails"
-  gem "rubocop"
+  gem "rubocop", "~> 0.32"
 end
 
 group :test do
@@ -37,6 +37,9 @@ group :test do
   gem "timecop"
   gem "shoulda"
   gem "mocha"
+  gem "launchy"
+  gem "poltergeist"
+  gem "database_cleaner"
 end
 
 group :staging, :production do
