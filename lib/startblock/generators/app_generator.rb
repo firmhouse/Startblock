@@ -20,6 +20,7 @@ module Startblock
     def startblock_customization
       invoke :customize_gemfile
       invoke :setup_development_environment
+      invoke :setup_development_environment
       invoke :setup_testing_environment
       invoke :setup_staging_environment
       invoke :setup_secret_token
@@ -48,6 +49,11 @@ module Startblock
       build :raise_on_delivery_errors
       build :raise_on_unpermitted_parameters
       build :provide_setup_script
+    end
+
+    def customize_applicationrb
+      say 'Configuring application.rb'
+      build :disable_helper_generation
     end
 
     def setup_testing_environment

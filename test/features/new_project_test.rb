@@ -80,4 +80,11 @@ class NewProjectTest < Minitest::Test
 
     assert development_rb_file.match(/letter_opener/), "Should have the letter opener"
   end
+
+  def test_helper_generation_should_be_disabled
+    application_rb_file = IO.read("#{project_path}/config/application.rb")
+
+    assert application_rb_file.match("config.generators.stylesheets = false"),
+      "Should disable stylesheet generation"
+  end
 end

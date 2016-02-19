@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## V1.5 - Unreleased
 
 ### Changed
+- Disable asset and helper generation in `rails generate` command
+
 ### Added
 - Add our test_helper.rb
 
