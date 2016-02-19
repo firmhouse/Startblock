@@ -37,6 +37,16 @@ module Startblock
       inject_into_class "config/application.rb", "Application", config
     end
 
+    def disable_helper_generation
+      config = <<-RUBY
+    config.generators.stylesheets = false
+    config.generators.javascripts = false
+    config.generators.helper = false
+      RUBY
+
+      inject_into_class "config/application.rb", "Application", config
+    end
+
     def provide_setup_script
       remove_file "bin/setup"
       template "bin_setup.erb", "bin/setup"
