@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## V1.5 - Unreleased
+## V1.5 - Olive Nickel - 2016-02-19
 
 ### Changed
 - Disable asset and helper generation in `rails generate` command
@@ -12,8 +12,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Removed
 - Raise on missing I18n
-
-### Fixed
 
 ## V1.4 - Maroon Lead - 2016-01-29
 
